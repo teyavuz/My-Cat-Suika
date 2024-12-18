@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8900027280359357968}
   - component: {fileID: 8900027280359357975}
   - component: {fileID: -6596673399577586313}
+  - component: {fileID: -429510897039658244}
+  - component: {fileID: 1018593653763133767}
   m_Layer: 0
   m_Name: Cat8
   m_TagString: Untagged
@@ -136,3 +138,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bbc160ba8961846913c924956ec045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-429510897039658244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8900027280359357974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f697e075890af449b9f75711dba6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1018593653763133767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8900027280359357974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d35434f5095eb4db44103573ec4700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FruitIndex: 7
+  PointsWhenAnnihilated: 1
+  FruitMass: 1.15
