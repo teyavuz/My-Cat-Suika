@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 6157940249310313776}
   - component: {fileID: 8938594460071601284}
   - component: {fileID: 5323713432118606333}
-  m_Layer: 0
+  - component: {fileID: 7664035150521140318}
+  m_Layer: 8
   m_Name: Cat9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,5 +164,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FruitIndex: 8
-  PointsWhenAnnihilated: 1
+  PointsWhenAnnihilated: 45
   FruitMass: 1.1
+--- !u!114 &7664035150521140318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981874131016476135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d4387457b21694680e0b75fe5d7d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

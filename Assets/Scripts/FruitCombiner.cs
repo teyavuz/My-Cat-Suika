@@ -29,6 +29,29 @@ public class FruitCombiner : MonoBehaviour
 
                     if (thisID > otherID)
                     {
+                        if (_info.FruitIndex == 1)
+                        {
+                            AudioManager.Instance.PlaySFX("1");
+                        }
+                        else if (1 < _info.FruitIndex && _info.FruitIndex <= 4)
+                        {
+                            AudioManager.Instance.PlaySFX("2_4");
+                        }
+                        else if (4 < _info.FruitIndex && _info.FruitIndex <= 7)
+                        {
+                            AudioManager.Instance.PlaySFX("5_7");
+                        }
+                        else if (7 < _info.FruitIndex && _info.FruitIndex <= 10)
+                        {
+                            AudioManager.Instance.PlaySFX("8_10");
+                        }
+                        else if (_info.FruitIndex == 11)
+                        {
+                            AudioManager.Instance.PlaySFX("11");
+                        }
+
+
+                        GameManager.Instance.UpdateScore(_info.PointsWhenAnnihilated);
                         if (_info.FruitIndex == FruitSelector.instance.Fruits.Length-1)
                         {
                             Destroy(collision.gameObject);
@@ -38,7 +61,7 @@ public class FruitCombiner : MonoBehaviour
                         else
                         {
                             Vector3 middlePosition = (transform.position + collision.transform.position) / 2f;
-                            GameObject go = Instantiate(SpawnCombinedFruit(_info.FruitIndex), GameManager.instance.transform);
+                            GameObject go = Instantiate(SpawnCombinedFruit(_info.FruitIndex), GameManager.Instance.transform);
                             go.transform.position = middlePosition;
 
                             ColliderInformer informer = go.GetComponent<ColliderInformer>();
