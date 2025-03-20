@@ -32,7 +32,7 @@ PlayerSettings:
     x: 0
     y: 0
     width: 1
-    height: 1
+    height: 0.80029297
   m_SplashScreenBackgroundPortraitUvs:
     serializedVersion: 2
     x: 0
@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: c3a5445cd3fef1c4495906bf197914fa, type: 3}
+  - logo: {fileID: 21300000, guid: 4426a478e6559094cb1005debb0ce86c, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -139,7 +139,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.6
+  bundleVersion: 1.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -661,7 +661,7 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: dbfd1dc500828c74f815e7a619a58f5e, type: 3}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 56c9ff8edb3edca40a08dac150935074, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 

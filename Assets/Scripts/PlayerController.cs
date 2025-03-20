@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private BoxCollider2D boundaries;
     [SerializeField] private Transform fruitThrowTransform;
-    [SerializeField] private float deadZone = 0.1f; // <- Ekledik
+    [SerializeField] private float deadZone = 0.3f; 
 
     private Bounds bounds;
     private float leftBound, rightBound;
     private float startingLeftBound, startingRightBound;
     private float offset;
+
+    // Drop modunu kontrol eden bayrak
+    public bool IsDropping { get; set; } = false;
 
     private void Awake()
     {
@@ -24,12 +27,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        MoveHandler();
+        // Eğer drop modunda ise hareket güncellemesini atla
+        if (!IsDropping)
+            MoveHandler();
     }
 
     private void MoveHandler()
     {
-        if (Mathf.Abs(UserInput.MoveInput.x) < deadZone) return; // <- Ekledik
+        if (Mathf.Abs(UserInput.MoveInput.x) < deadZone) return;
 
         float targetX = Mathf.Clamp(
             transform.position.x + UserInput.MoveInput.x * moveSpeed * Time.deltaTime,
@@ -38,7 +43,7 @@ public class PlayerController : MonoBehaviour
         );
 
         transform.position = new Vector3(
-            Mathf.Lerp(transform.position.x, targetX, 0.5f), // <- Daha yumuşak hareket
+            Mathf.Lerp(transform.position.x, targetX, 0.5f),
             transform.position.y,
             transform.position.z
         );
